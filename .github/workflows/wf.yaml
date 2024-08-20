@@ -25,3 +25,5 @@ jobs:
       if: github.event.pull_request.merged == true
       run: |
         echo "Last branch commit: ${{ github.event.pull_request.head.sha }}"
+        sha=${{ github.event.pull_request.head.sha }}
+        echo "and short commit is: ${sha:0:5}"
